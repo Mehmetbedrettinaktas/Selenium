@@ -1,4 +1,4 @@
-package day1;
+package day01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,16 +8,19 @@ public class C01_IlkClass {
         /*
         En Temel haliyle bir otomasyon yapmak icin class'imiza otomasyon
         icin gerekli olan webdriver'in yerini gostermemiz gerekir
-        bunun icin java kutuphanesinde System.setProperty() method'unu kullaniriz
-        ve method'un icine ilk olarak driver'i yazariz. Ikinci olarak onun fiziki
-        yolunu kopyalariz.
+        bunun icin java kutuphanesinde;
+        1-  System.setProperty() method'unu kullaniriz
+        ve method'un icine ilk olarak driver'i yazariz.
+       2-  Ikinci olarak onun fiziki yolunu kopyalariz.
          */
         System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://www.amazon.com");
         System.out.println("Actual Title() = " + driver.getTitle()); // Gidinlen sitenin basligini yazdirir.
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl()); // Gidinlen sayfanin Url'ini getirir.
 
         System.out.println(driver.getPageSource()); // Gidinlen sitenin kaynak kodlarini String olarak bize getirir.
+
     }
 }
