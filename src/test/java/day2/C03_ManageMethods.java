@@ -3,7 +3,7 @@ package day2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class C03_ManageMethodlari {
+public class C03_ManageMethods {
     /*
          Yeni bir Class olusturalim.C03_ManageWindow
         Amazon soyfasina gidelim. https://www.amazon.com/
