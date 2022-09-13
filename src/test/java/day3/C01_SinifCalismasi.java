@@ -30,9 +30,9 @@ public class C01_SinifCalismasi {
         //a. http://a.testaddressbook.com adresine gidiniz.
         driver.get("http://a.testaddressbook.com");
         //b. Sign in butonuna basin
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement signInButton = driver.findElement(By.linkText("Sign in"));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         signInButton.click();
         //c. email textbox,password textbox, and signin button elementlerini locate ediniz..
         WebElement emailTextbox = driver.findElement(By.id("session_email"));
@@ -41,15 +41,15 @@ public class C01_SinifCalismasi {
         //d. Kullanıcı adını ve şifreyi aşağıya girin ve oturum aç (sign in)buttonunu tıklayın:
         //i. Username : testtechproed@gmail.com
         //ii. Password : Test1234!
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         emailTextbox.sendKeys("testtechproed@gmail.com");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         password.sendKeys("Test1234!");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         signin.click();
         //e. Expected user id nin testtechproed@gmail.com oldugunu dogrulayin(verify).
         WebElement expectedUser = driver.findElement(By.className("navbar-text"));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         if(expectedUser.isDisplayed()){
             System.out.println("ExpectedUser Testi PASSED "+expectedUser.getText());
         }else System.out.println("ExpectedUser Testi FAILED");
